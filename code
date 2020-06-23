@@ -1,0 +1,41 @@
+# Input about the season
+
+def seasonListGenerator(): 
+season = input('What season is it where you are going? Please enter winter, fall, spring, or summer. ') 
+return season 
+
+# Welcome the user 
+
+def main(): 
+print('Welcome the Personalized Packing List Generator. ' 'In order to generate your list, you will have to provide some information about yourself and your trip. ') 
+
+if tripBooked(): 
+	# the finalList applies to everyone
+finalList = [list1, list2, list3, list4] 
+
+gender = genderListGenerator() 
+
+# Input about the gender
+
+if gender in ['male', 'Male']: 
+finalList.append(list6) 
+
+elif gender in ['female', 'Female']: 
+finalList.append(list5) 
+
+season = seasonListGenerator() 
+
+if season in ["winter", 'Winter']: 
+finalList.append(list7) 
+if season in ["fall", 'Fall', "spring", 'Spring']:   
+finalList.append(list8) 
+if season in ["summer", 'Summer']:  
+finalList.append(list9) 
+
+print('Here is what we recommend as basic things to take with you:',) 
+for l in finalList: 
+print(l) 
+
+print (‘Thank you for using this generator! Tip: Make a checklist of everything you need, then go through everything again’)
+
+if __name__ == "__main__": main()
